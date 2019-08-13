@@ -7,9 +7,8 @@
 </template>
 
 
-
 <script>
-import Card from './Card'
+  import Card from './Card'
 
   export default {
     name: 'CardContainer',
@@ -23,6 +22,14 @@ import Card from './Card'
 
 
 <style scoped>
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+
+}
 
 
 </style>
