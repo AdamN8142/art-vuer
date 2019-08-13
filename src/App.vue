@@ -46,6 +46,7 @@ export default {
   box-sizing: border-box;
   margin:0;
   padding:0;
-  background-color: rgba(28, 216, 191, 0.591);
+  background-color: wheat;
+  font-family: monospace;
 }
 </style>

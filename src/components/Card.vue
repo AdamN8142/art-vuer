@@ -12,20 +12,29 @@
   }
 </script>
 
-<style scoped>
+<style>
 .image {
   height:500px;
   width: 700px;
+  border-radius: 10px;
 }
 .card {
   padding:20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: burlywood;
+  width: 900px;
+  border-radius: 20px;
+  margin-bottom: 70px;
 }
 .image-date{
   font-size: 50px;
   font-family: cursive;
+  background-color: wheat;
+  color:brown;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 </style>

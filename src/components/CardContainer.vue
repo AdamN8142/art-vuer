@@ -21,13 +21,13 @@
 
 
 
-<style scoped>
+<style>
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 140px;
+  margin-top: 70px;
 
 }
 
