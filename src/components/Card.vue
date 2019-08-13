@@ -7,6 +7,7 @@
 <script>
   export default {
     name: 'Card',
+    props: ['images']
   }
 </script>
 

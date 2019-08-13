@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Card />
+    <Card v-bind:images="images"/>
   </div>
 </template>
 
