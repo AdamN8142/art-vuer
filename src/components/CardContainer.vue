@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Card v-bind:images="images"/>
+    <div v-bind:key="image.id" v-for="image in images">
+      <Card v-bind:image="image"/>
+    </div>
   </div>
 </template>
 
@@ -17,7 +19,6 @@ import Card from './Card'
     }
   }
 </script>
-
 
 
 
