@@ -21,16 +21,19 @@ export default {
       errorMsg: ''
     }
   },
+  mounted: function() {
+    this.fetchImages()
+  },
 
   methods: {
     fetchImages: function(){
       fetch(url)
         .then(result => result.json())
-        .then(data => this.displayImages(data))
+        .then(data => this.images = data.records)
         .catch(error => this.errorMsg = error)
     }
   }
-  
+
 
 }
 </script>
