@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+const url = "https://api.harvardartmuseums.org/image?apikey=688eb260-b190-11e9-95eb-6525f67b00a0"
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header
+  },
+  data() {
+    return {
+      images: [],
+      errorMsg: ''
+    }
+  },
+  mounted: function() {
+    this.fetchImages()
+  },
+
+  methods: {
+    fetchImages: function(){
+      fetch(url)
+        .then(result => result.json())
+        .then(data => this.images = data.records)
+        .catch(error => this.errorMsg = error)
+    }
   }
+
+
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  background-color: rgba(28, 216, 191, 0.591);
 }
 </style>
