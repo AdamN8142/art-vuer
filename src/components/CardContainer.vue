@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-  
+    <Card />
   </div>
 </template>
 
 
 
 <script>
+import Card from './Card'
+
   export default {
     name: 'CardContainer',
-    props: ['images']
+    props: ['images'],
+    components: {
+      Card
+    }
   }
 </script>
 
