@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <Header />
+    <CardContainer v-bind:images="images"/>
 
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
+import CardContainer from './components/CardContainer'
 const url = "https://api.harvardartmuseums.org/image?apikey=688eb260-b190-11e9-95eb-6525f67b00a0"
 
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    CardContainer
   },
   data() {
     return {
